@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">SlideHoldApp</string>
+    <string name="content">获取在当前窗口内的绝对坐标，getLeft , getTop, getBottom, getRight, 这一组是获取相对在它父窗口里的坐标。*/
+view.getLocationInWindow(location);
+//获取在整个屏幕内的绝对坐标，注意这个值是要从屏幕顶端算起，也就是包括了通知栏的高度。
+view.getLocationOnScreen(location);
+
+其中 location [0]代表x坐标,location
+ [1] 代表 坐标。
+
+ 所以在需要确定组件在父窗体中的坐标时，使用getLocationInWindow，需要获得组件在整个屏幕的坐标时，使用getLocationOnScreen。
+
+这里要注意虽然getLocationOnScreen是获取组件在屏幕中的坐标，但如果我们想拿到这个坐标，并且在这个坐标附近再添加一个组件时，直接使用拿到的坐标来建立新的组件是达不到效果的。
+View itemView = userManagerView.getListView().getChildAt(j);// 获取列表子项
+int[] location =newint[2];
+itemView.getLocationOnScreen(location);
+ImageView image =newImageView(getContext());
+
+image.setBackgroundResource(R.drawable.operator);
+if(GlobalData.loginState()){
+params=newAbsoluteLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
+LayoutParams.WRAP_CONTENT, location[0]-15, location[1]-95);
+}else{
+
+params=newAbsoluteLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
+
+LayoutParams.WRAP_CONTENT, location[0]-15, location[1]-25);
+}
+image.setLayoutParams(params);获取在当前窗口内的绝对坐标，getLeft , getTop, getBottom, getRight, 这一组是获取相对在它父窗口里的坐标。*/
+view.getLocationInWindow(location);
+//获取在整个屏幕内的绝对坐标，注意这个值是要从屏幕顶端算起，也就是包括了通知栏的高度。
+view.getLocationOnScreen(location);
+
+其中 location [0]代表x坐标,location
+ [1] 代表 坐标。
+
+ 所以在需要确定组件在父窗体中的坐标时，使用getLocationInWindow，需要获得组件在整个屏幕的坐标时，使用getLocationOnScreen。
+
+这里要注意虽然getLocationOnScreen是获取组件在屏幕中的坐标，但如果我们想拿到这个坐标，并且在这个坐标附近再添加一个组件时，直接使用拿到的坐标来建立新的组件是达不到效果的。
+View itemView = userManagerView.getListView().getChildAt(j);// 获取列表子项
+int[] location =newint[2];
+itemView.getLocationOnScreen(location);
+ImageView image =newImageView(getContext());
+
+image.setBackgroundResource(R.drawable.operator);
+if(GlobalData.loginState()){
+params=newAbsoluteLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
+LayoutParams.WRAP_CONTENT, location[0]-15, location[1]-95);
+}else{
+
+params=newAbsoluteLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
+
+LayoutParams.WRAP_CONTENT, location[0]-15, location[1]-25);
+}
+image.setLayoutParams(params);</string>
+</resources>

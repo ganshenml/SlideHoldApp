@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.slideholdapp.MainActivity">
+
+    <com.example.administrator.slideholdapp.ObservableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="@string/content" />
+
+            <include android:id="@+id/middlePanel" layout="@layout/middle_item_layout"></include>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/content" />
+
+
+        </LinearLayout>
+
+    </com.example.administrator.slideholdapp.ObservableScrollView>
+
+    <include android:id="@+id/topPanel" layout="@layout/middle_item_layout" android:visibility="gone"/>
+</FrameLayout>
